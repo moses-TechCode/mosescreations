@@ -1,0 +1,127 @@
+body{
+  text-align:center;
+background-color:#000000;
+color:white;
+}
+.icon{
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0,0, 0.5);
+}
+.c {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between image and text */
+}
+
+.img {
+  flex: 1;
+  max-width: 50%; /* Adjust image size */
+}
+
+.t {
+  flex: 1;
+  max-width: 50%;
+}
+.s{width: 200px;
+height: 200px;}
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Logo styling */
+.logo {
+  flex: 1;
+}
+
+.logo-image {
+  max-height: 40px; /* Adjust size as needed */
+  display: block;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #575757;
+}
+#contact{
+  background-color:black;
+}
+#about{
+  background-color: #1A1A1A;
+}
+#project{
+  background-color: #1A1A1A;
+}
+#Contact{
+  background-color:#575757 ;
+}
+.exprince{
+  background-color: #000000;
+}
+#icon{
+  float: left;
+}
+
+#icon1{
+  float: left;
+}
+#icon2{
+  float: left;
+}
+.review1{
+  box-shadow: 5px 12px 30px #575757;
+  width: 200px;
+  height: 200px;
+  background: #575757;
+  margin: 10px;
+  border: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.review2{
+  box-shadow: 5px 12px 30px #575757;
+  background: #575757;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 10px;
+}
+.review3{
+  border: 10px;
+  box-shadow: 5px 12px 30px #575757;
+  background: #575757;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+.review {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.pimg{
+  width: 200px;
+  height: 300px;
+}
