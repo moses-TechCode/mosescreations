@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>  
+  <head>  
+    <link rel="stylesheet" href="Css/styles.css">  
+    <link rel="stylesheet" href="Css/gallery.css">  
+    <link rel="stylesheet" href="Css/home.css">  
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />  
+    <meta name="description" content="This is the personal website of mosestechcode" />
+    <title>MosesTechCode - Personal Website</title>
+  </head>  
+  <body>  
+   <section class="hero">  
+      <nav>  
+        <ul>  
+          <li> <a href="reviews/Index.htm">reviews</a></li>  
+          <li> <a href="#">about</a></li>  
+          <li> <a href="#">service</a></li>  
+          <li> <a href="#">help</a></li>  
+        </ul>  
+         <div>  
+            <img  class="github" src="images.png"/>  
+          </div>  
+      </nav>  
+      <div><img  class="logo" src="logo.jpg" /></div>  
+      </section>  <nav class="navbar">  
+    <div><img class="logo"  src="logo.jpg"   /></div>  
+    <ul>  
+     <li><a href="https://github.com/mosescreations"><img class="github" src="images.png" /></a></li> 
+      <li><img class="mune" src="menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"  onclick="show_navbar()"/></li>
+    </ul>  
+  </nav>  
+   <nav class="moble_nav">
+        <ul>
+          <li><img src="close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" onclick="hide()"/></li>
+           
+        <li><a href="#">about</a></li>
+        <li><a href="reviews/Index.htm">reviews</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <p class="text">
+      welcome to MosesTechCode
+    </p>
+  </div>
+  <div  class="Projects_and_contact">
+  <a href="Projects/Index.html"> <button class="btn">  Explore Projects</button></a>
+  <br>
+  <button class="btn" onclick="Contact_page()" >Contact Me</button>
+</div>
+<div class="Contact_container">
+  <input type="name" placeholder="name" />
+  <input type="email" placeholder=" email">
+  <textarea name="message" id='message' rows="8" cols="40"> message
+  </textarea>
+  <button type="submit">send</button>
+</div>
+<script src="scripts/script.js"></script>     
+</body>  
+</html>
