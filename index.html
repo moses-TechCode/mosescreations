@@ -187,6 +187,17 @@ His technical skills, creativity, and commitment to learning have made him a you
       </div>
     </div>
     </section>
+    
+      <button id="chatbot-toggle">💬</button>
+
+  <div id="chatbot">
+    <header>Help Bot</header>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input-container">
+      <input type="text" id="chatbot-input" placeholder="Type your question..." />
+      <button id="chatbot-send">Send</button>
+    </div>
+  </div>
     <script>
       const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
@@ -194,6 +205,74 @@ const navLinks = document.getElementById('nav-links');
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
+const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbot = document.getElementById('chatbot');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+
+    // Toggle chatbot window
+    chatbotToggle.addEventListener('click', () => {
+      if (chatbot.style.display === 'flex') {
+        chatbot.style.display = 'none';
+      } else {
+        chatbot.style.display = 'flex';
+        chatbotInput.focus();
+      }
+    });
+
+    // Basic bot replies based on keywords
+    function getBotReply(message) {
+      message = message.toLowerCase();
+
+      if(message.includes('hello') || message.includes('hi')) {
+        return "Hello! How can I help you today?";
+      }
+      if(message.includes('services')) {
+        return "I offer web development, app development, game development, and AI integration services.";
+      }
+      if(message.includes('price') || message.includes('cost')) {
+        return "Please contact me via the contact form for pricing details.";
+      }
+      if(message.includes('portfolio')) {
+        return "You can view my latest projects in the Portfolio section of the website.";
+      }
+      if(message.includes('contact')) {
+        return "You can reach me via the Contact section or email me directly.";
+      }
+      if(message.trim() === '') {
+        return "Please enter your question.";
+      }
+      return "Sorry, I didn't understand that. Can you please rephrase?";
+    }
+
+    // Add message to chat window
+    function addMessage(text, sender) {
+      const msg = document.createElement('div');
+      msg.classList.add('message', sender === 'bot' ? 'bot-message' : 'user-message');
+      msg.textContent = text;
+      chatbotMessages.appendChild(msg);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    // Handle send message
+    function sendMessage() {
+      const message = chatbotInput.value.trim();
+      if(!message) return;
+
+      addMessage(message, 'user');
+      chatbotInput.value = '';
+
+      setTimeout(() => {
+        const reply = getBotReply(message);
+        addMessage(reply, 'bot');
+      }, 600);
+    }
+
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter') sendMessage();
+    });
     </script>
 </body>
 </html>
