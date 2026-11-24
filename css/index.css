@@ -144,3 +144,39 @@
 .links{
   display: flex;
 }
+/* BLOG POST (add at the bottom of your CSS; replaces apn-guide.css) */
+/* Always visible, even if your scroll animation script misses it */
+.blog-post { opacity: 1; transform: none; padding: 60px 5% 80px; background: #0e0e0e; }
+
+.post-header { max-width: 760px; margin: 0 auto 30px; text-align: left; }
+.post-tag { display: inline-block; background: rgba(0,255,213,0.12); color: #00ffd5; padding: 4px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; margin-bottom: 16px; }
+.post-header h1 { font-size: clamp(28px, 6vw, 42px); line-height: 1.25; margin-bottom: 16px; }
+.post-meta { color: #aaa; font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 16px; padding-bottom: 20px; border-bottom: 1px solid #222; }
+
+.post-body { max-width: 760px; margin: 0 auto; text-align: left; font-size: 17px; line-height: 1.85; color: #e6e6e6; }
+.post-body p { margin-bottom: 20px; }
+.post-body h2 { color: #00ffd5; font-size: 26px; margin: 40px 0 16px; }
+
+.post-steps { list-style: none; counter-reset: step; margin-bottom: 24px; }
+.post-steps > li { counter-increment: step; position: relative; padding: 4px 0 18px 52px; }
+.post-steps > li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 34px; height: 34px; border-radius: 50%; background: #00ffd5; color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+.post-settings { list-style: none; margin-top: 12px; padding: 14px 18px; background: #1e272e; border-left: 4px solid #00ffd5; border-radius: 6px; }
+.post-settings li { padding: 3px 0; }
+.post-settings strong { color: #00ffd5; }
+
+.post-tip { background: #1e272e; border-radius: 10px; padding: 16px 20px; margin: 24px 0; color: #aaa; font-size: 15px; }
+.post-body ul.post-list { padding-left: 22px; margin-bottom: 20px; }
+.post-list li { margin-bottom: 8px; }
+
+.post-footer { max-width: 760px; margin: 50px auto 0; padding-top: 24px; border-top: 1px solid #222; text-align: left; }
+.post-footer p { margin-bottom: 16px; }
+.post-footer strong { color: #00ffd5; }
+.post-back { display: inline-block; padding: 10px 22px; border: 2px solid #00ffd5; border-radius: 5px; color: #00ffd5; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+.post-back:hover { transform: scale(1.05); box-shadow: 0 0 15px #00ffd5; }
+
+@media (max-width: 768px) {
+  .blog-post { padding: 40px 5% 60px; }
+  .post-body { font-size: 16px; }
+  .post-body h2 { font-size: 22px; }
+}
